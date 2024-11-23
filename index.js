@@ -1,9 +1,8 @@
 const express = require('express')
 const routerCliente = require('./src/routers/clientes')
 const routerFilmes = require('./src/routers/filmes')
+const routerFilmes_Locados = require('./src/routers/filmes_locados')
 const database = require('./src/config/database')
-
-
 const app = express()
 
 // Middlewere json 
@@ -12,6 +11,7 @@ app.use(express.json())
 // adicionar as rotas ao express
 app.use('/cliente',routerCliente)
 app.use('/filmes',routerFilmes)
+app.use('/filmes_locados',routerFilmes_Locados)
 
 database.db
     .sync({ force: false })

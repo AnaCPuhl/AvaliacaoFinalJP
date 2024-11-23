@@ -1,6 +1,5 @@
 const ModelFilme = require('../models/filmes')
 
-
 // criando a classe service filmes
 class ServiceFilmes {
     async GetFilmes() {

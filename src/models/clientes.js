@@ -1,6 +1,4 @@
 const database = require('../config/database')
-
-
 class ModelCliente {
     constructor() {
         this.model = database.db.define('clientes', {
@@ -18,7 +16,7 @@ class ModelCliente {
             },
             senha: {
                 type: database.db.Sequelize.STRING,
-                unique: true
+                
             }    
         })
     }

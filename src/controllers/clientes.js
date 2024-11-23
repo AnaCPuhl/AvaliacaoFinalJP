@@ -1,7 +1,5 @@
 const ServiceCliente = require('../services/clientes')
 
-
-
 // criando a classe croller do cliente
 class ControllerCliente {
     // todas as funções do controller, recebem req, res
@@ -16,7 +14,6 @@ class ControllerCliente {
             res.status(500).send({ msg: error.message })
             
         }
-
 
     }
 
@@ -34,7 +31,6 @@ class ControllerCliente {
             res.status(500).send({ msg: error.message })
             
         }
-
 
     }
 
@@ -55,7 +51,6 @@ class ControllerCliente {
             
         }
 
-
     }
 
     async DeleteCliente(req, res) {
@@ -73,5 +68,18 @@ class ControllerCliente {
 
 
     }
+
+
+async Login(req, res) {
+    try {
+        const { email, password } = req.body
+        const token = await ServiceCliente.Login(email, password)
+        res.status(200).send({ token })
+    } catch (error) {
+        res.status(500).send({ msg: error.message })
+    }
+
 }
+}
+
 module.exports = new ControllerCliente()
