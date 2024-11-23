@@ -1,0 +1,29 @@
+{
+  "name": "avaliacaofinaljp",
+  "version": "1.0.0",
+  "description": "Avaliação final 22/11/2024",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnaCPuhl/AvaliacaoFinalJP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnaCPuhl/AvaliacaoFinalJP/issues"
+  },
+  "homepage": "https://github.com/AnaCPuhl/AvaliacaoFinalJP#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.21.1",
+    "jest": "^29.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.4",
+    "nodemon": "^3.1.7",
+    "sequelize": "^6.37.5"
+  }
+}
